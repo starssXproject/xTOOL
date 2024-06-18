@@ -1,5 +1,6 @@
 import sys
-from del_module import loading_animation  # Pastikan nama modulnya sesuai
+from del_module import loading_animation
+from szip_module import archive, extract
 
 def display_text():
     text = r"""
@@ -21,5 +22,16 @@ if __name__ == "__main__":
     elif len(sys.argv) == 3 and sys.argv[1] == "del":
         path_to_delete = sys.argv[2]
         loading_animation(path_to_delete)
+    elif len(sys.argv) >= 4 and sys.argv[1] == "szip":
+        if sys.argv[2] == "-a":
+            source_path = sys.argv[3]
+            dest_path = sys.argv[4]
+            archive(source_path, dest_path)
+        elif sys.argv[2] == "-e":
+            szip_path = sys.argv[3]
+            dest_dir = sys.argv[5] if len(sys.argv) == 6 and sys.argv[4] == "-d" else "."
+            extract(szip_path, dest_dir)
+        else:
+            print(f"Invalid command. Usage: xtool szip -a <source_path> <dest_path.szip> | xtool szip -e <source.szip> [-d <dest_dir>]")
     else:
-        print(f"Invalid command. Usage: xtool del <path_to_delete>")
+        print(f"Invalid command. Usage: xtool del <path_to_delete> | xtool szip -a <source_path> <dest_path.szip> | xtool szip -e <source.szip> [-d <dest_dir>]")
