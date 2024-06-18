@@ -1,6 +1,9 @@
 import sys
+from colorama import init, Fore, Style
 from del_module import loading_animation
 from szip_module import archive, extract
+
+init()
 
 def display_text():
     text = r"""
@@ -12,7 +15,6 @@ ___  __\__    ___/\_____  \  \_____  \ |    |
       \/                  \/         \/        \/
 Version r0.0.1 starssXproject
 
-Type 'help' for more information
     """
     print(text)
 
