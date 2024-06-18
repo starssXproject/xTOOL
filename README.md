@@ -1,8 +1,9 @@
 # Requirement
-- Python, pip install psutil tqdm colorama
+- Python
 
-# How to use
+# How to run xTOOL
 WINDOWS:
-- Add source code to PATH
-- Then run "xtool"
+- Add source code to PATH.
+- Run "xtool install" to install requirement package.
+- And run "xtool".
 - Done
