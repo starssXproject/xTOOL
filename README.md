@@ -3,6 +3,6 @@
 
 # How to use
 WINDOWS:
-    - Add source code to PATH
-    - Then run "xtool"
-    - Done
+- Add source code to PATH
+- Then run "xtool"
+- Done
